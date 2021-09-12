@@ -13,7 +13,7 @@ class GatewayServer(schema_pb2_grpc.GatewayServicer):
     def Call(self, request_iterator, context):
         for req in request_iterator:
             print(req)
-            yield schema_pb2.Response(num=1)
+            yield schema_pb2.Response(num=req.num+1)
             time.sleep(1)
 
 

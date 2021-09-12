@@ -23,7 +23,7 @@ def generate_message():
     while True:
         num = queue.get()
         print(num)
-        # yield schema_pb2.Request(num=num)
+        yield schema_pb2.Request(num=num)
         # yield schema_pb2.Request()
 
 
